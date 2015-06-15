@@ -1,10 +1,8 @@
 Basic application demonstrating Spring Boot / Spring MVC / Thymleaf / REST / Spring Test.
 
-Demonstrates using the Spring Test MockMvc framework for ease of testing controllers.
+Demonstrates using the Spring Test MockMvc framework for ease of unit testing controllers, and Spring's TestRestTemplate for integration testing the controllers.
 
-The back end data is hardcoded in the REST services for this demo.
-
-Unit and integration testing using Springs MockMvc testing framework.
+The back end data is hardcoded for this demo.
 
 Run with:
 
