@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Airport</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/navbar.css"/>
+
+    <div class="container">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand">Aztec Airport Directory</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h4>Airport:</h4>
+            <br/>
+            <p th:text="'Name: ' + ${airport['name']}"/>
+            <p th:text="'Code: ' + ${airport['code']}"/>
+            <p th:text="'Status: ' + ${airport['status']}"/>
+            <p th:text="'Available Aeroplanes:'"/>
+            <p th:each="aeroplaneCode : ${airport['aeroplaneCodes']}">
+                <a th:href="@{/aeroplane/list/__${aeroplaneCode}__}" th:text="${aeroplaneCode}"/>
+            </p>
+            <br/><br/>
+        </div>
+    </div>
+</body>
+<script src="../js/bootstrap.min.js"></script>
+</html>

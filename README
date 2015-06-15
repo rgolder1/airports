@@ -1,0 +1,17 @@
+Basic application demonstrating Spring Boot / Spring MVC / Thymleaf / REST / Spring Test.
+
+Demonstrates using the Spring Test MockMvc framework for ease of testing controllers.
+
+The back end data is hardcoded in the REST services for this demo.
+
+Unit and integration testing using Springs MockMvc testing framework.
+
+Run with:
+
+mvn spring-boot:run -Drun.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
+
+(Optionally debug on port 5005).
+
+Navigate to URL:
+
+http://localhost:8080/airport/list
